@@ -1,3 +1,5 @@
+# https://www.youtube.com/watch?v=sE67bP2PnOo
+
 using Printf
 using Statistics
 
@@ -78,7 +80,24 @@ for i = 1:5, j = 2:2:10
 end
 
 # arrays
-println(zeros(Int32, 2, 2))
-println(Array{Int32}(undef, 5))
+a1 = zeros(Int32, 2, 2)
+a2 = Array{Int32}(undef, 5)
+a3 = Float64[]
+a4 = [1, 2, 3]
+
+println(a4[1])
+println(a4[end])
+println(5 in a4)
+println(findfirst(isequal(2), a4))
+f(a) = (a >= 2) ? true : false
+println(findall(f, a4))
+println(count(f, a4))
 
 
+println(size(a4))
+print(length(a4))
+println(sum(a4))
+splice!(a4, 2:1, [8, 9])
+println(a4)
+splice!(a4, 2:3)
+println(a4)
